@@ -89,5 +89,15 @@ namespace practico5.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap v937_aew_111_3 {
+            get {
+                object obj = ResourceManager.GetObject("v937-aew-111_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
