@@ -63,9 +63,9 @@ namespace practico5.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap guardar2 {
+        internal static System.Drawing.Bitmap _10734569 {
             get {
-                object obj = ResourceManager.GetObject("guardar2", resourceCulture);
+                object obj = ResourceManager.GetObject("10734569", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,19 @@ namespace practico5.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pItFRM {
+        internal static System.Drawing.Bitmap _455056 {
             get {
-                object obj = ResourceManager.GetObject("pItFRM", resourceCulture);
+                object obj = ResourceManager.GetObject("455056", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guardar2 {
+            get {
+                object obj = ResourceManager.GetObject("guardar2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
