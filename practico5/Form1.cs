@@ -46,7 +46,6 @@ namespace practico5
                 string sexo;
                 string nombre = TXB_NOMBRE.Text.ToUpper().Substring(0, 1) + TXB_NOMBRE.Text.ToLower().Substring(1);
                 string apellido = TXB_APELLIDO.Text.ToUpper().Substring(0, 1) + TXB_APELLIDO.Text.ToLower().Substring(1);
-                
 
                 if(RBUT_HOMBRE.Checked == true)
                 {
@@ -56,6 +55,8 @@ namespace practico5
                 {
                     sexo = "Mujer";
                 }
+                DGV_EMPLEADO.Columns[0].DefaultCellStyle.Font = new Font("Comic Sans MS", 8);
+                DGV_EMPLEADO.Columns[1].DefaultCellStyle.Font = new Font("Comic Sans MS", 8);
 
                 DGV_EMPLEADO.Rows[index].Cells[0].Value = nombre;
                 DGV_EMPLEADO.Rows[index].Cells[1].Value = apellido;
