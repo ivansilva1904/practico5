@@ -52,6 +52,7 @@
             this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.foto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PICBOX_FOTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_EMPLEADO)).BeginInit();
@@ -289,6 +290,10 @@
             this.foto.Name = "foto";
             this.foto.ReadOnly = true;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "OPFD_FOTO";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +340,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn saldo;
         private System.Windows.Forms.DataGridViewTextBoxColumn foto;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

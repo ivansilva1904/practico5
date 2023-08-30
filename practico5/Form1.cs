@@ -31,14 +31,14 @@ namespace practico5
             {
                 var index = this.DGV_EMPLEADO.Rows.Add();
 
-                DGV_EMPLEADO.Rows[index].Cells[1].Value = TXB_NOMBRE.Text;
-                DGV_EMPLEADO.Rows[index].Cells[2].Value = TXB_APELLIDO.Text;
-                DGV_EMPLEADO.Rows[index].Cells[3].Value = TXB_SALDO.Text;
+                DGV_EMPLEADO.Rows[index].Cells[0].Value = TXB_NOMBRE.Text;
+                DGV_EMPLEADO.Rows[index].Cells[1].Value = TXB_APELLIDO.Text;
+                DGV_EMPLEADO.Rows[index].Cells[2].Value = TXB_SALDO.Text;
+                DGV_EMPLEADO.Rows[index].Cells[3].Value = TXB_FOTO.Text;
                 DGV_EMPLEADO.Rows[index].Cells[4].Value = TXB_FOTO.Text;
                 DGV_EMPLEADO.Rows[index].Cells[5].Value = TXB_FOTO.Text;
-                DGV_EMPLEADO.Rows[index].Cells[6].Value = TXB_FOTO.Text;
 
-                DGV_EMPLEADO.Rows[].;
+                //DGV_EMPLEADO.Rows[].;
             }
         }
     }

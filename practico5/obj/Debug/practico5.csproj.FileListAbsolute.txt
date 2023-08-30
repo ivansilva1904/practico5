@@ -1,10 +1,10 @@
 C:\Users\ivans\source\repos\practico5\practico5\bin\Debug\practico5.exe.config
 C:\Users\ivans\source\repos\practico5\practico5\bin\Debug\practico5.exe
 C:\Users\ivans\source\repos\practico5\practico5\bin\Debug\practico5.pdb
-C:\Users\ivans\source\repos\practico5\practico5\obj\Debug\practico5.csproj.AssemblyReference.cache
 C:\Users\ivans\source\repos\practico5\practico5\obj\Debug\practico5.Form1.resources
 C:\Users\ivans\source\repos\practico5\practico5\obj\Debug\practico5.Properties.Resources.resources
 C:\Users\ivans\source\repos\practico5\practico5\obj\Debug\practico5.csproj.GenerateResource.cache
 C:\Users\ivans\source\repos\practico5\practico5\obj\Debug\practico5.csproj.CoreCompileInputs.cache
 C:\Users\ivans\source\repos\practico5\practico5\obj\Debug\practico5.exe
 C:\Users\ivans\source\repos\practico5\practico5\obj\Debug\practico5.pdb
+C:\Users\ivans\source\repos\practico5\practico5\obj\Debug\practico5.csprojAssemblyReference.cache
