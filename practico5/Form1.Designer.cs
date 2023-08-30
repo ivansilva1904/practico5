@@ -86,6 +86,7 @@
             // 
             this.TXB_FOTO.Location = new System.Drawing.Point(32, 254);
             this.TXB_FOTO.Name = "TXB_FOTO";
+            this.TXB_FOTO.ReadOnly = true;
             this.TXB_FOTO.Size = new System.Drawing.Size(176, 22);
             this.TXB_FOTO.TabIndex = 13;
             // 
@@ -107,7 +108,7 @@
             this.BUT_GUARDAR.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BUT_GUARDAR.Image = global::practico5.Properties.Resources.guardar2;
             this.BUT_GUARDAR.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BUT_GUARDAR.Location = new System.Drawing.Point(236, 227);
+            this.BUT_GUARDAR.Location = new System.Drawing.Point(240, 227);
             this.BUT_GUARDAR.Name = "BUT_GUARDAR";
             this.BUT_GUARDAR.Size = new System.Drawing.Size(100, 50);
             this.BUT_GUARDAR.TabIndex = 11;
@@ -118,9 +119,9 @@
             // 
             // TXB_SALDO
             // 
-            this.TXB_SALDO.Location = new System.Drawing.Point(186, 170);
+            this.TXB_SALDO.Location = new System.Drawing.Point(168, 171);
             this.TXB_SALDO.Name = "TXB_SALDO";
-            this.TXB_SALDO.Size = new System.Drawing.Size(145, 22);
+            this.TXB_SALDO.Size = new System.Drawing.Size(172, 22);
             this.TXB_SALDO.TabIndex = 10;
             this.TXB_SALDO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXB_SALDO_KeyPress);
             // 
@@ -129,7 +130,7 @@
             this.RBUT_MUJER.AutoSize = true;
             this.RBUT_MUJER.BackColor = System.Drawing.Color.Transparent;
             this.RBUT_MUJER.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBUT_MUJER.Location = new System.Drawing.Point(282, 138);
+            this.RBUT_MUJER.Location = new System.Drawing.Point(286, 140);
             this.RBUT_MUJER.Name = "RBUT_MUJER";
             this.RBUT_MUJER.Size = new System.Drawing.Size(54, 17);
             this.RBUT_MUJER.TabIndex = 9;
@@ -142,7 +143,7 @@
             this.RBUT_HOMBRE.AutoSize = true;
             this.RBUT_HOMBRE.BackColor = System.Drawing.Color.Transparent;
             this.RBUT_HOMBRE.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RBUT_HOMBRE.Location = new System.Drawing.Point(186, 138);
+            this.RBUT_HOMBRE.Location = new System.Drawing.Point(168, 140);
             this.RBUT_HOMBRE.Name = "RBUT_HOMBRE";
             this.RBUT_HOMBRE.Size = new System.Drawing.Size(64, 17);
             this.RBUT_HOMBRE.TabIndex = 8;
@@ -155,24 +156,24 @@
             this.DATEPICK_FECNAC.CalendarFont = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DATEPICK_FECNAC.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DATEPICK_FECNAC.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DATEPICK_FECNAC.Location = new System.Drawing.Point(256, 97);
+            this.DATEPICK_FECNAC.Location = new System.Drawing.Point(265, 98);
             this.DATEPICK_FECNAC.Name = "DATEPICK_FECNAC";
             this.DATEPICK_FECNAC.Size = new System.Drawing.Size(75, 22);
             this.DATEPICK_FECNAC.TabIndex = 7;
             // 
             // TXB_APELLIDO
             // 
-            this.TXB_APELLIDO.Location = new System.Drawing.Point(186, 57);
+            this.TXB_APELLIDO.Location = new System.Drawing.Point(168, 58);
             this.TXB_APELLIDO.Name = "TXB_APELLIDO";
-            this.TXB_APELLIDO.Size = new System.Drawing.Size(145, 22);
+            this.TXB_APELLIDO.Size = new System.Drawing.Size(172, 22);
             this.TXB_APELLIDO.TabIndex = 6;
             this.TXB_APELLIDO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXB_APELLIDO_KeyPress);
             // 
             // TXB_NOMBRE
             // 
-            this.TXB_NOMBRE.Location = new System.Drawing.Point(186, 20);
+            this.TXB_NOMBRE.Location = new System.Drawing.Point(168, 21);
             this.TXB_NOMBRE.Name = "TXB_NOMBRE";
-            this.TXB_NOMBRE.Size = new System.Drawing.Size(145, 22);
+            this.TXB_NOMBRE.Size = new System.Drawing.Size(172, 22);
             this.TXB_NOMBRE.TabIndex = 5;
             this.TXB_NOMBRE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXB_NOMBRE_KeyPress);
             // 

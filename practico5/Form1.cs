@@ -44,6 +44,9 @@ namespace practico5
             {
                 var index = this.DGV_EMPLEADO.Rows.Add();
                 string sexo;
+                string nombre = TXB_NOMBRE.Text.ToUpper().Substring(0, 1) + TXB_NOMBRE.Text.ToLower().Substring(1);
+                string apellido = TXB_APELLIDO.Text.ToUpper().Substring(0, 1) + TXB_APELLIDO.Text.ToLower().Substring(1);
+                
 
                 if(RBUT_HOMBRE.Checked == true)
                 {
@@ -53,9 +56,6 @@ namespace practico5
                 {
                     sexo = "Mujer";
                 }
-
-                string nombre = TXB_NOMBRE.Text.ToUpper().Substring(0, 1) + TXB_NOMBRE.Text.Substring(1);
-                string apellido = TXB_APELLIDO.Text.ToUpper().Substring(0, 1) + TXB_APELLIDO.Text.Substring(1);
 
                 DGV_EMPLEADO.Rows[index].Cells[0].Value = nombre;
                 DGV_EMPLEADO.Rows[index].Cells[1].Value = apellido;
