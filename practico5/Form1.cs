@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Security;
 
 namespace practico5
 {
@@ -19,6 +21,16 @@ namespace practico5
 
         private void BUT_FOTO_Click(object sender, EventArgs e)
         {
+            if(OPFD_FOTO.ShowDialog() == DialogResult.OK)
+            {
+                //var sr = new StreamReader(OPFD_FOTO.FileName);
+                OPFD_FOTO.InitialDirectory = "C:";
+                OPFD_FOTO.Filter = "ARCHIVOS IMAGENES|*.jpg|Archivos imagenes|*png";
+                PICBOX_FOTO.ImageLocation = OPFD_FOTO.FileName;
+                PICBOX_FOTO.BackgroundImage = null;
+                //PICBOX_FOTO.BackgroundImageLayout = ImageLayout.Stretch;
+                TXB_FOTO.Text = OPFD_FOTO.FileName;
+            }
 
         }
 
