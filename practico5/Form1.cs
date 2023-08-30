@@ -39,18 +39,54 @@ namespace practico5
             if(!string.IsNullOrWhiteSpace(TXB_NOMBRE.Text) && 
                 !string.IsNullOrWhiteSpace(TXB_APELLIDO.Text) &&
                 !string.IsNullOrWhiteSpace(TXB_SALDO.Text) &&
-                !string.IsNullOrWhiteSpace(TXB_FOTO.Text))
+                !string.IsNullOrWhiteSpace(TXB_FOTO.Text) &&
+                (RBUT_HOMBRE.Checked == true || RBUT_MUJER.Checked == true))
             {
                 var index = this.DGV_EMPLEADO.Rows.Add();
+                string sexo;
 
-                DGV_EMPLEADO.Rows[index].Cells[0].Value = TXB_NOMBRE.Text;
-                DGV_EMPLEADO.Rows[index].Cells[1].Value = TXB_APELLIDO.Text;
-                DGV_EMPLEADO.Rows[index].Cells[2].Value = TXB_SALDO.Text;
-                DGV_EMPLEADO.Rows[index].Cells[3].Value = TXB_FOTO.Text;
-                DGV_EMPLEADO.Rows[index].Cells[4].Value = TXB_FOTO.Text;
+                if(RBUT_HOMBRE.Checked == true)
+                {
+                    sexo = "Hombre";
+                }
+                else
+                {
+                    sexo = "Mujer";
+                }
+
+                string nombre = TXB_NOMBRE.Text.ToUpper().Substring(0, 1) + TXB_NOMBRE.Text.Substring(1);
+                string apellido = TXB_APELLIDO.Text.ToUpper().Substring(0, 1) + TXB_APELLIDO.Text.Substring(1);
+
+                DGV_EMPLEADO.Rows[index].Cells[0].Value = nombre;
+                DGV_EMPLEADO.Rows[index].Cells[1].Value = apellido;
+                DGV_EMPLEADO.Rows[index].Cells[2].Value = DATEPICK_FECNAC.Value.ToShortDateString();
+                DGV_EMPLEADO.Rows[index].Cells[3].Value = sexo;
+                DGV_EMPLEADO.Rows[index].Cells[4].Value = TXB_SALDO.Text;
                 DGV_EMPLEADO.Rows[index].Cells[5].Value = TXB_FOTO.Text;
+            }
+        }
 
-                //DGV_EMPLEADO.Rows[].;
+        private void TXB_SALDO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TXB_NOMBRE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TXB_APELLIDO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }
