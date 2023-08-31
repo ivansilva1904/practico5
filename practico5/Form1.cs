@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Security;
+using System.Reflection;
 
 namespace practico5
 {
@@ -29,7 +30,6 @@ namespace practico5
                 PICBOX_FOTO.ImageLocation = OPFD_FOTO.FileName;
                 PICBOX_FOTO.BackgroundImage = null;
                 //PICBOX_FOTO.BackgroundImageLayout = ImageLayout.Stretch;
-                TXB_FOTO.Text = OPFD_FOTO.FileName;
             }
 
         }
@@ -64,6 +64,7 @@ namespace practico5
                 DGV_EMPLEADO.Rows[index].Cells[3].Value = sexo;
                 DGV_EMPLEADO.Rows[index].Cells[4].Value = TXB_SALDO.Text;
                 DGV_EMPLEADO.Rows[index].Cells[5].Value = TXB_FOTO.Text;
+                DGV_EMPLEADO.Rows[index].Cells[6].Value = TXB_FOTO.Text;
             }
         }
 
@@ -89,6 +90,25 @@ namespace practico5
             {
                 e.Handled = true;
             }
+        }
+
+        private void OPFD_FOTO_FileOk(object sender, CancelEventArgs e)
+        {
+            //Stream objetoArchivo = OPFD_FOTO.OpenFile();
+
+            string rutaProyecto = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase).Remove(0, 6);
+
+            string rutaArchivo = OPFD_FOTO.FileName.ToString();
+
+            FileInfo archivo = new FileInfo(rutaArchivo);
+
+            string archivoNombre = archivo.Name;
+
+            string destino = rutaProyecto + "/fotos/" + archivoNombre;
+
+            destino = destino.Replace("\\", "/");
+
+            TXB_FOTO.Text = destino;
         }
     }
 }
