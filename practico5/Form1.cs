@@ -26,7 +26,7 @@ namespace practico5
             {
                 //var sr = new StreamReader(OPFD_FOTO.FileName);
                 OPFD_FOTO.InitialDirectory = "C:";
-                OPFD_FOTO.Filter = "ARCHIVOS IMAGENES|*.jpg|Archivos imagenes|*png";
+                OPFD_FOTO.Filter = "Archivos imagenes|*.jpg|Archivos imagenes|*.png";
                 PICBOX_FOTO.ImageLocation = OPFD_FOTO.FileName;
                 PICBOX_FOTO.BackgroundImage = null;
                 //PICBOX_FOTO.BackgroundImageLayout = ImageLayout.Stretch;
@@ -63,7 +63,7 @@ namespace practico5
                 DGV_EMPLEADO.Rows[index].Cells[2].Value = DATEPICK_FECNAC.Value.ToShortDateString();
                 DGV_EMPLEADO.Rows[index].Cells[3].Value = sexo;
                 DGV_EMPLEADO.Rows[index].Cells[4].Value = TXB_SALDO.Text;
-                DGV_EMPLEADO.Rows[index].Cells[5].Value = TXB_FOTO.Text;
+                DGV_EMPLEADO.Rows[index].Cells[5].Value = Image.FromFile(OPFD_FOTO.FileName); //aca deberia ir la ubicacion /fotos/ cuando logres copiar el archivo ahi
                 DGV_EMPLEADO.Rows[index].Cells[6].Value = TXB_FOTO.Text;
             }
         }
@@ -94,8 +94,6 @@ namespace practico5
 
         private void OPFD_FOTO_FileOk(object sender, CancelEventArgs e)
         {
-            //Stream objetoArchivo = OPFD_FOTO.OpenFile();
-
             string rutaProyecto = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase).Remove(0, 6);
 
             string rutaArchivo = OPFD_FOTO.FileName.ToString();
@@ -109,6 +107,11 @@ namespace practico5
             destino = destino.Replace("\\", "/");
 
             TXB_FOTO.Text = destino;
+        }
+
+        private void DGV_EMPLEADO_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
