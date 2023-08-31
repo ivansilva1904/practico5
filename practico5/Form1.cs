@@ -65,6 +65,20 @@ namespace practico5
                 DGV_EMPLEADO.Rows[index].Cells[4].Value = TXB_SALDO.Text;
                 DGV_EMPLEADO.Rows[index].Cells[5].Value = Image.FromFile(OPFD_FOTO.FileName); //aca deberia ir la ubicacion /fotos/ cuando logres copiar el archivo ahi
                 DGV_EMPLEADO.Rows[index].Cells[6].Value = TXB_FOTO.Text;
+
+                if (Convert.ToInt32(DGV_EMPLEADO.Rows[index].Cells[4].Value) < 50)
+                {
+                    DGV_EMPLEADO.Rows[index].DefaultCellStyle.BackColor = Color.Red;
+                }
+
+                this.limpiar_campos();
+            }
+            else
+            {
+                MessageBox.Show("Faltan campos por completar",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
@@ -120,9 +134,20 @@ namespace practico5
             //Check if click is on specific column 
             if (e.ColumnIndex == DGV_EMPLEADO.Columns["eliminar"].Index)
             {
-                //Put some logic here, for example to remove row from your binding list.
                 DGV_EMPLEADO.Rows.RemoveAt(e.RowIndex);
             }
+        }
+
+        private void limpiar_campos()
+        {
+            TXB_NOMBRE.Clear();
+            TXB_APELLIDO.Clear();
+            RBUT_HOMBRE.Checked = false;
+            RBUT_MUJER.Checked = false;
+            TXB_SALDO.Clear();
+            TXB_FOTO.Clear();
+            PICBOX_FOTO.ImageLocation = null;
+            PICBOX_FOTO.BackgroundImage = Properties.Resources.v937_aew_111_3;
         }
     }
 }
