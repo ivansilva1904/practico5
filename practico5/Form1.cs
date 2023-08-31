@@ -111,7 +111,18 @@ namespace practico5
 
         private void DGV_EMPLEADO_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //if click is on new row or header row (si, me robe este codigo)
+            if (e.RowIndex == DGV_EMPLEADO.NewRowIndex || e.RowIndex < 0)
+            {
+                return;
+            }
 
+            //Check if click is on specific column 
+            if (e.ColumnIndex == DGV_EMPLEADO.Columns["eliminar"].Index)
+            {
+                //Put some logic here, for example to remove row from your binding list.
+                DGV_EMPLEADO.Rows.RemoveAt(e.RowIndex);
+            }
         }
     }
 }
