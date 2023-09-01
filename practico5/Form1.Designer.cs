@@ -262,6 +262,7 @@
             this.DGV_EMPLEADO.Name = "DGV_EMPLEADO";
             this.DGV_EMPLEADO.Size = new System.Drawing.Size(843, 155);
             this.DGV_EMPLEADO.TabIndex = 2;
+            this.DGV_EMPLEADO.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_EMPLEADO_CellClick);
             this.DGV_EMPLEADO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_EMPLEADO_CellContentClick);
             // 
             // Nombre

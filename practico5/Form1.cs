@@ -64,7 +64,7 @@ namespace practico5
                 DGV_EMPLEADO.Rows[index].Cells[3].Value = sexo;
                 DGV_EMPLEADO.Rows[index].Cells[4].Value = TXB_SALDO.Text;
                 DGV_EMPLEADO.Rows[index].Cells[5].Value = Image.FromFile(OPFD_FOTO.FileName);
-                DGV_EMPLEADO.Rows[index].Cells[6].Value = TXB_FOTO.Text; //preguntar al profe sobre si deberia guardarse la ubicacion original o /fotos/
+                DGV_EMPLEADO.Rows[index].Cells[6].Value = TXB_FOTO.Text;
 
                 if (Convert.ToInt32(DGV_EMPLEADO.Rows[index].Cells[4].Value) < 50)
                 {
@@ -145,7 +145,9 @@ namespace practico5
                     DGV_EMPLEADO.Rows.RemoveAt(e.RowIndex);
                 }
             }
-
+        }
+        private void DGV_EMPLEADO_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             DataGridViewRow fila = DGV_EMPLEADO.CurrentCell.OwningRow;
 
             if(e.ColumnIndex == DGV_EMPLEADO.Columns["sexo"].Index)
@@ -172,5 +174,6 @@ namespace practico5
             PICBOX_FOTO.ImageLocation = null;
             PICBOX_FOTO.BackgroundImage = Properties.Resources.v937_aew_111_3;
         }
+
     }
 }
