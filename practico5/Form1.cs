@@ -24,12 +24,10 @@ namespace practico5
         {
             if(OPFD_FOTO.ShowDialog() == DialogResult.OK)
             {
-                //var sr = new StreamReader(OPFD_FOTO.FileName);
                 OPFD_FOTO.InitialDirectory = "C:";
                 OPFD_FOTO.Filter = "Archivos de imagenes (*.jpg)|*.jpg|Archivos de imagenes (*.png)|*.png";
                 PICBOX_FOTO.ImageLocation = OPFD_FOTO.FileName;
                 PICBOX_FOTO.BackgroundImage = null;
-                //PICBOX_FOTO.BackgroundImageLayout = ImageLayout.Stretch;
             }
 
         }
