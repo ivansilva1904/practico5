@@ -26,7 +26,7 @@ namespace practico5
             {
                 //var sr = new StreamReader(OPFD_FOTO.FileName);
                 OPFD_FOTO.InitialDirectory = "C:";
-                OPFD_FOTO.Filter = "Archivos imagenes|*.jpg|Archivos imagenes|*.png";
+                OPFD_FOTO.Filter = "Archivos de imagenes (*.jpg)|*.jpg|Archivos de imagenes (*.png)|*.png";
                 PICBOX_FOTO.ImageLocation = OPFD_FOTO.FileName;
                 PICBOX_FOTO.BackgroundImage = null;
                 //PICBOX_FOTO.BackgroundImageLayout = ImageLayout.Stretch;
@@ -63,13 +63,17 @@ namespace practico5
                 DGV_EMPLEADO.Rows[index].Cells[2].Value = DATEPICK_FECNAC.Value.ToShortDateString();
                 DGV_EMPLEADO.Rows[index].Cells[3].Value = sexo;
                 DGV_EMPLEADO.Rows[index].Cells[4].Value = TXB_SALDO.Text;
-                DGV_EMPLEADO.Rows[index].Cells[5].Value = Image.FromFile(OPFD_FOTO.FileName); //aca deberia ir la ubicacion /fotos/ cuando logres copiar el archivo ahi
-                DGV_EMPLEADO.Rows[index].Cells[6].Value = TXB_FOTO.Text;
+                DGV_EMPLEADO.Rows[index].Cells[5].Value = Image.FromFile(OPFD_FOTO.FileName);
+                DGV_EMPLEADO.Rows[index].Cells[6].Value = TXB_FOTO.Text; //preguntar al profe sobre si deberia guardarse la ubicacion original o /fotos/
 
                 if (Convert.ToInt32(DGV_EMPLEADO.Rows[index].Cells[4].Value) < 50)
                 {
                     DGV_EMPLEADO.Rows[index].DefaultCellStyle.BackColor = Color.Red;
+                    DGV_EMPLEADO.Rows[index].DefaultCellStyle.ForeColor = Color.White;
                 }
+
+                string rutaArchivo = OPFD_FOTO.FileName.ToString();
+                File.Copy(rutaArchivo, TXB_FOTO.Text);
 
                 this.limpiar_campos();
             }
@@ -132,9 +136,28 @@ namespace practico5
             }
 
             //Check if click is on specific column 
-            if (e.ColumnIndex == DGV_EMPLEADO.Columns["eliminar"].Index)
+            if(e.ColumnIndex == DGV_EMPLEADO.Columns["eliminar"].Index)
             {
-                DGV_EMPLEADO.Rows.RemoveAt(e.RowIndex);
+                DialogResult resp = MessageBox.Show("Seguro desea eliminar el registro?",
+                    "Advertencia", MessageBoxButtons.YesNo);
+                if (resp == DialogResult.Yes)
+                {
+                    DGV_EMPLEADO.Rows.RemoveAt(e.RowIndex);
+                }
+            }
+
+            DataGridViewRow fila = DGV_EMPLEADO.CurrentCell.OwningRow;
+
+            if(e.ColumnIndex == DGV_EMPLEADO.Columns["sexo"].Index)
+            {
+                if (fila.Cells["sexo"].Value.ToString() == "Hombre")
+                {
+                    RBUT_HOMBRE.Checked = true;
+                }
+                else
+                {
+                    RBUT_MUJER.Checked = true;
+                }
             }
         }
 

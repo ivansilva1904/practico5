@@ -46,7 +46,6 @@
             this.LAB_NOMBRE = new System.Windows.Forms.Label();
             this.PICBOX_FOTO = new System.Windows.Forms.PictureBox();
             this.DGV_EMPLEADO = new System.Windows.Forms.DataGridView();
-            this.OPFD_FOTO = new System.Windows.Forms.OpenFileDialog();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +54,7 @@
             this.foto = new System.Windows.Forms.DataGridViewImageColumn();
             this.ruta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.OPFD_FOTO = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PICBOX_FOTO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_EMPLEADO)).BeginInit();
@@ -258,15 +258,11 @@
             this.foto,
             this.ruta,
             this.eliminar});
-            this.DGV_EMPLEADO.Location = new System.Drawing.Point(12, 371);
+            this.DGV_EMPLEADO.Location = new System.Drawing.Point(22, 371);
             this.DGV_EMPLEADO.Name = "DGV_EMPLEADO";
             this.DGV_EMPLEADO.Size = new System.Drawing.Size(843, 155);
             this.DGV_EMPLEADO.TabIndex = 2;
             this.DGV_EMPLEADO.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_EMPLEADO_CellContentClick);
-            // 
-            // OPFD_FOTO
-            // 
-            this.OPFD_FOTO.FileOk += new System.ComponentModel.CancelEventHandler(this.OPFD_FOTO_FileOk);
             // 
             // Nombre
             // 
@@ -318,6 +314,10 @@
             this.eliminar.Name = "eliminar";
             this.eliminar.Text = "Eliminar";
             this.eliminar.UseColumnTextForButtonValue = true;
+            // 
+            // OPFD_FOTO
+            // 
+            this.OPFD_FOTO.FileOk += new System.ComponentModel.CancelEventHandler(this.OPFD_FOTO_FileOk);
             // 
             // Form1
             // 
